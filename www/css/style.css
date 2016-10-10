@@ -1,0 +1,188 @@
+/* Empty. Add your own CSS if you like */
+.logo_pumpable img {
+	width: 100%;
+}
+.logo_pumpable {
+	width:40%;
+	margin:20% auto 0;
+}
+.black_content{
+	background-color: #000; 
+}
+.blank_scroll, .overflow-scroll {
+	    overflow-y: hidden !important;
+}
+/* .log_forms{
+	width: 12rem;
+	margin: 20% auto;
+}
+.login_qr{
+	width: 12rem;
+	height: 3rem;
+}
+.login_sms{
+	width: 12rem;
+	height: 3rem;
+}
+.login_sms, .login_qr{
+	width:2rem;
+}
+.login_sms img, .login_qr img {
+	width: 2rem;
+	float: left;
+}
+.qr_title, .sms_title{
+	float: left;
+	background: green;
+	color:#fff;
+	padding:0.4rem 0.8rem;
+	float:right;
+	 */
+.tab-hidden{
+	display: none;
+}
+.list_center{
+	max-width: 20rem;
+    margin: 3rem auto 0;
+}
+.black_lister {
+	background-color: #000 !important;
+}
+.item_blacker{
+	background-color:#000 !important; 
+	color: #fff;
+	border: 0;
+	padding-left: 60px;
+	min-height: 50px;
+}
+.title_item{
+	color: #fff;
+	padding: 10px 20px;
+	background: #006102;
+}
+.item-thumbnail-left > img:first-child{
+	max-height: 40px;
+	max-width: 40px;
+}
+ .tab-nav.tabs {
+    display: none;
+} 
+.pane{
+	background: #000;
+}
+.bar.bar-stable{
+	margin: 0 auto;
+    width: 96%;
+	background: #000;
+	color: #fff;
+/* 	border-bottom: #0e6519 solid .1rem; */
+}
+.bar.bar-stable .title{
+	color: #fff;
+}
+.stat_greey_letters{
+	color: #cbcbcb;
+	font-size: 1rem;
+	font-weight: 600;
+	height: 100%;
+    margin: auto;
+
+}
+.text-align-center{
+	text-align: center;
+}
+.ranks, .rank {
+	margin: 1rem 0;
+}
+.bg_green{
+	background: #0D601A;
+	width: 65%;
+}
+.bg_red{
+	background: #800105;
+	width: 35%;
+}
+.circle_progres{
+	
+}
+.margin-left_minus{
+	margin-left: -5rem;
+}
+.chart-doughnut:after{
+	content: '20%';
+	color: #fff;
+	position: relative;
+	top:0;
+}
+.margin-Left_minus_minus{
+	position: relative;
+	top:0;
+	left:-10.5rem;
+}
+text{
+	font-style: italic;
+}
+.starter_width{
+	width: 48%;
+	margin: 0 auto;
+}
+.starter_title{
+	color:#fff;
+	text-align: center;
+	line-height: 3;
+	display: block;
+	font-weight: 600;
+}
+.starter_width a {
+	text-decoration: none;
+	color: #fff;
+	background: #006102;
+	display: block;
+	text-align: center;
+	font-weight: 600;
+	line-height: 3;
+}
+.graph_img img{
+	width:100%;
+}
+.bg_pumpable{
+	height: 14%;
+}
+.bg_pumpable img{
+	width: 100%;
+    margin-left: -3%;
+}
+.logo_pump img, .logo_dump img{
+	width:100%;
+}
+.logo_dump{
+	margin-top: -1.3rem;
+}
+.oclock img{
+	width:28%;
+}
+.oclock_title{
+	color:#fff;
+	font-size: .7rem;
+}
+.red_green_control img{
+	 height: 8.333%;
+}
+
+.has-tabs, .bar-footer.has-tabs{
+	bottom: 0;
+}
+.modal_black{
+	background: #000;
+	color: #fff;
+}
+.black-input input, .black-input{
+	color:#fff;
+	background-color: #000;
+	 border-color: #155628
+}
+.button-green{
+	background-color: #006102 !important;
+	    border-color: #155628 !important;
+	        border-radius: 0 !important;
+}
