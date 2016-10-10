@@ -12,10 +12,13 @@
   		<ion-content>
 					<div class="list list-dark list-inset black-input">
 			  <label class="item item-input black-input">
-			    <input type="text" placeholder="SMS code">
+			    <input type="text" placeholder="SMS code" ng-model="smscode">
 			  </label>
+			  <div class="card">
+			  	<div class="item">{{smscode}}</div>
+			  </div>
 			<div class="padding">
-        <button class="button button-green button-block button-positive activated green-green" ng-click="modal.hide()">Submit</button>
+        <a class="button button-green button-block button-positive activated green-green" ng-click="modal.hide()"  href="#/stchoise/{{smscode}}">Submit</a>
       </div>
 			</div>
 		</ion-content>

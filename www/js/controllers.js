@@ -1,6 +1,31 @@
 angular.module('blank.controllers', [])
-.controller("blankCtrl", function($scope){
-		
+.controller("blankCtrl", function($scope, $ionicModal, $cordovaBarcodeScanner){
+	$scope.smscode = "1111";
+    $scope.scanBarcode = function() {
+        $cordovaBarcodeScanner.scan().then(function(imageData) {
+            alert(imageData.text);
+            console.log("Barcode Format -> " + imageData.format);
+            console.log("Cancelled -> " + imageData.cancelled);
+        }, function(error) {
+            console.log("An error happened -> " + error);
+        });
+    };
+    $ionicModal.fromTemplateUrl('template/modal.html', {
+				scope: $scope,
+				animation: 'slide-in-up'
+		}).then(function(modal) {
+				$scope.modal = modal;
+		});
+		$scope.smsModal = function(){
+			$scope.modal.show();
+		};
+		$scope.smsModalHide = function(){
+			$timeout(function() {
+        otherService.updateTestService('Mellow Yellow')
+        console.log('update with timeout fired')
+    }, 3000);
+			$scope.modal.hide();
+		};
 })
 .controller("statsCtrl", function($scope){
 		$scope.colors = ['#0D601A', '#800105'];
@@ -73,6 +98,6 @@ angular.module('blank.controllers', [])
     console.log(window.innerHeight);
     console.log($scope.height_chart);	
 })  
-.controller("stChoiseCtrl", function($scope){
-		
+.controller("stChoiseCtrl", function($scope, $stateParams){
+		$scope.smscode = $stateParams.smscode;
 });
