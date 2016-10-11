@@ -5,16 +5,16 @@
     </div>
     <div class="row">
       <div class="list list_center col col-50">
-      <a class="item item-thumbnail-left item_blacker" ng-click="googleLogin()" href="#/stchoise/google">
+      <a class="item item-thumbnail-left item_blacker" ng-click="googleLogin()">
         <img src="img/imgpsh_fullsize.png">
         <div class="title_item">Login via Google</div>
       </a>
       <span>{{details}}</span>
-      <a class="item item-thumbnail-left item_blacker" ng-click="scanBarcode()" href="#/stchoise/{{imageData.text}}">
+      <a class="item item-thumbnail-left item_blacker" ng-click="scanBarcode()">
         <img src="img/maim_qr_logo.png"">
         <div class="title_item">Login via QR</div>
       </a>
-      <a class="item item-thumbnail-left item_blacker"  ng-click="smsModal()">
+      <a class="item item-thumbnail-left item_blacker"  ng-click="smsModal();reset()">
         <img src="img/main_sms_logo.png"">
         <div class="title_item">Login via SMS</div>
       </a>

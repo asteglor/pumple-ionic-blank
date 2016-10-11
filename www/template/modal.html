@@ -2,24 +2,24 @@
 			<!--Header con titulo y boton -->
   		<ion-header-bar class="modal_black">
 				<!--Titulo-->
-   			<h1 class="title modal_black">Write your SMS code</h1>
-				<!--Boton de cierre -->
-				<div class="button button-clear" ng-click="modal.hide()">
-					<span class="icon ion-close"></span>
+				<div class="modal_bg_pumpable"> 
+					<img src="img/img_logo_tmp.png" alt="">
 				</div>
+   			
   		</ion-header-bar>
 			<!--Contenido-->
   		<ion-content>
-					<div class="list list-dark list-inset black-input">
-			  <label class="item item-input black-input">
-			    <input type="text" placeholder="SMS code" ng-model="code">
-			  </label>
-			  <div class="card">
-			  	<div class="item">{{code}}</div>
-			  </div>
-			<div class="padding">
-        <a class="button button-green button-block button-positive activated green-green" ng-click="modal.hide()"  href="#/stchoise/{{code}}">Submit</a>
-      </div>
+					<div class="list list-dark list-inset black-input marign-top-20">
+					  <label class="item item-input item-black marign-top-20">
+  						<input type="tel" id="showKeyboard" ng-model="user.lastName">
+					</label>
+					 <!--  <div class="card">
+					 	<div class="item">{{code}}</div>
+					 </div> -->
+				<div class="padding font-weigth">Login via SMS</div>
+				<input type="submit" value="Confirm" class="button button-green button-block button-positive activated green-green button-with-5 button-width-center" ng-click="smsModalHide()">
 			</div>
+			
 		</ion-content>
+<!-- <a class="button button-green button-block button-positive activated green-green button-with-50" ng-click="modal.hide()"  href="#/stchoise/{{code}}"></a> -->
 </ion-modal-view>

@@ -1,19 +1,27 @@
 angular.module('blank.controllers', [])
-.controller("blankCtrl", function($scope, $ionicModal, $cordovaBarcodeScanner, $cordovaOauth, $http){
-	$scope.code = "1111";
+.controller("blankCtrl", function($scope, $ionicModal, $cordovaBarcodeScanner, $cordovaOauth, $http, $window, $rootScope){
 	$scope.googleLogin = function() {
+		//	$window.location = "#/stchoise/barcode";
         $cordovaOauth.google("781318676721-amojregr5qhn1m7o351fn2omea5guq0q.apps.googleusercontent.com", ["https://www.googleapis.com/auth/userinfo.email"]).then(function(result) {
-    console.log("Response Object -> " + JSON.stringify(result));
+    	$window.location = "#/stchoise/goglelogin";
+    	console.log("Response Object -> " + JSON.stringify(result));
+    	alert(result);
+    	
 }, function(error) {
     console.log("Error -> " + error);
 });
     }
-
+    
     $scope.scanBarcode = function() {
+    	//	$window.location = "#/stchoise/barcode";
         $cordovaBarcodeScanner.scan().then(function(imageData) {
             console.log(imageData.text);
             console.log("Barcode Format -> " + imageData.format);
             console.log("Cancelled -> " + imageData.cancelled);
+            if(imageData.cancelled === false){
+            	$window.location = "#/stchoise/barcode";
+            }
+           	
         }, function(error) {
             console.log("An error happened -> " + error);
         });
@@ -26,14 +34,21 @@ angular.module('blank.controllers', [])
 		});
 		$scope.smsModal = function(){
 			$scope.modal.show();
+			angular.element(document).ready(function(){
+				var element = $window.document.getElementById("showKeyboard");
+				element.focus();
+			});
+			
 		};
 		$scope.smsModalHide = function(){
-			$timeout(function() {
-        otherService.updateTestService('Mellow Yellow')
-        console.log('update with timeout fired')
-    }, 3000);
+			$window.location = "#/stchoise/sms";
 			$scope.modal.hide();
 		};
+		$scope.master = {firstName:"John", lastName:""};
+    $scope.reset = function() {
+        $scope.user = angular.copy($scope.master);
+    };
+    $scope.reset();
 })
 .controller("statsCtrl", function($scope){
 		$scope.colors = ['#0D601A', '#800105'];
@@ -108,4 +123,5 @@ angular.module('blank.controllers', [])
 })  
 .controller("stChoiseCtrl", function($scope, $stateParams){
 		$scope.code = $stateParams.code;
+
 });
