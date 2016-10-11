@@ -1,9 +1,17 @@
 angular.module('blank.controllers', [])
-.controller("blankCtrl", function($scope, $ionicModal, $cordovaBarcodeScanner){
-	$scope.smscode = "1111";
+.controller("blankCtrl", function($scope, $ionicModal, $cordovaBarcodeScanner, $cordovaOauth, $http){
+	$scope.code = "1111";
+	$scope.googleLogin = function() {
+        $cordovaOauth.google("781318676721-amojregr5qhn1m7o351fn2omea5guq0q.apps.googleusercontent.com", ["https://www.googleapis.com/auth/userinfo.email"]).then(function(result) {
+    console.log("Response Object -> " + JSON.stringify(result));
+}, function(error) {
+    console.log("Error -> " + error);
+});
+    }
+
     $scope.scanBarcode = function() {
         $cordovaBarcodeScanner.scan().then(function(imageData) {
-            alert(imageData.text);
+            console.log(imageData.text);
             console.log("Barcode Format -> " + imageData.format);
             console.log("Cancelled -> " + imageData.cancelled);
         }, function(error) {
@@ -99,5 +107,5 @@ angular.module('blank.controllers', [])
     console.log($scope.height_chart);	
 })  
 .controller("stChoiseCtrl", function($scope, $stateParams){
-		$scope.smscode = $stateParams.smscode;
+		$scope.code = $stateParams.code;
 });

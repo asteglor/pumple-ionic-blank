@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "819046971616",
+    "project_id": "firebase-pumpable"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819046971616:android:5a57eb27e60c8a68",
+        "android_client_info": {
+          "package_name": "com.ionicframework.pumpableblankionic975041"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "819046971616-rlkcqsuee69jvmc73d9pjrlert01gsmo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ionicframework.pumpableblankionic975041",
+            "certificate_hash": "735FCAE818B7A87EBB47F1B2585EC04261CAADCB"
+          }
+        },
+        {
+          "client_id": "819046971616-mrortirmtid606igtv47srl8ai0m9r13.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCr-2izBIGz3EQN2uVDJVReNjiPWishLeA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
