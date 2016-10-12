@@ -35,10 +35,10 @@ angular.module('blank.controllers', [])
 		});
 		$scope.smsModal = function(){
 			$scope.modal.show();
-			angular.element(document).ready(function(){
+			/*angular.element(document).ready(function(){
 				var element = $window.document.getElementById("showKeyboard");
 				element.focus();
-			});
+			});*/
 			
 		};
 		$scope.smsModalHide = function(){
@@ -49,6 +49,18 @@ angular.module('blank.controllers', [])
     $scope.reset = function() {
         $scope.user = angular.copy($scope.master);
     };
+    $scope.keyboardVisible = false;
+    $scope.keyboardSettings = {
+        action: function(number) {
+            $scope.user.code += number;
+        },
+        width:"73%",
+        roundButtons:true,
+        theme:"balanced-dark" // light, stable, positive, calm, balanced, energized, assertive, royal, dark
+    }
+    $scope.showKeyboard = function($event) {
+        keyboardVisible = true;
+    }
     $scope.reset();
 })
 .controller("statsCtrl", function($scope){

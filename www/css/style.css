@@ -219,6 +219,10 @@ text{
 	font-size: 3rem;
 	margin-top: 2rem;
 }
+.num-key input{
+	font-size: 3rem;
+	margin-top: 2rem;
+}
 .font-weigth{
 	font-weight: 600;
 	font-size: 1rem;
