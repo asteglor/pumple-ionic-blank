@@ -1,11 +1,11 @@
 angular.module('blank.controllers', [])
-.controller("blankCtrl", function($scope, $ionicModal, $cordovaBarcodeScanner, $cordovaOauth, $http, $window, $rootScope){
+.controller("blankCtrl", function($scope, $ionicModal, $cordovaBarcodeScanner, $cordovaOauth, $http, $window, $ionicLoading){
 	$scope.googleLogin = function() {
 		//	$window.location = "#/stchoise/barcode";
         $cordovaOauth.google("781318676721-amojregr5qhn1m7o351fn2omea5guq0q.apps.googleusercontent.com", ["https://www.googleapis.com/auth/userinfo.email"]).then(function(result) {
     	$window.location = "#/stchoise/goglelogin";
     	console.log("Response Object -> " + JSON.stringify(result));
-    	alert(result);
+    	console.log(result);
     	
 }, function(error) {
     console.log("Error -> " + error);
@@ -13,6 +13,7 @@ angular.module('blank.controllers', [])
     }
     
     $scope.scanBarcode = function() {
+    	$ionicLoading.show({template: 'Loading...'});
     	//	$window.location = "#/stchoise/barcode";
         $cordovaBarcodeScanner.scan().then(function(imageData) {
             console.log(imageData.text);
@@ -21,7 +22,7 @@ angular.module('blank.controllers', [])
             if(imageData.cancelled === false){
             	$window.location = "#/stchoise/barcode";
             }
-           	
+           	$ionicLoading.hide();
         }, function(error) {
             console.log("An error happened -> " + error);
         });
@@ -44,7 +45,7 @@ angular.module('blank.controllers', [])
 			$window.location = "#/stchoise/sms";
 			$scope.modal.hide();
 		};
-		$scope.master = {firstName:"John", lastName:""};
+		$scope.master = {service:"smscode", code:""};
     $scope.reset = function() {
         $scope.user = angular.copy($scope.master);
     };
