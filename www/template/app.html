@@ -1,26 +1,56 @@
 <ion-view view-title="">
-  <ion-content class="black_content">
+  <ion-content class="black_content" scroll="false">
   	<div class="row">
   		<div class="oclock col col-33">
   			<img src="img/ic_timer.png">
   			<div class="oclock_title">5 second Remaninig</div>
   		</div>
   		
-  		<div class="logo_pump col col-33"><img src="img/img_pump.png"></div>
+  		<div class="logo_pump col col-33" ng-click="slidePrevious()"><img src="img/img_pump.png"></div>
   	</div>
-  
   		<div class="row">
+
   			<div class="col col-70">
-	  			<canvas 
-	  				height="{{height_chart}}"
-	  				width="{{width_chart}}" 
-	  				class="chart-bar"
-	  				chart-data="data"
-	  				chart-labels="labels"
-	  				chart-colors="colors"
-	  				chart-options="options"
-	  				chart-dataset-override="datasetOverride" 
-	  			></canvas> 
+<ion-slides  options="slideOptions" slider="data.slider" does-continue="true">
+    <ion-slide-page>
+      <canvas 
+            height="{{height_chart}}"
+            width="{{width_chart}}" 
+            class="chart-bar border_can"
+            chart-data="data"
+            chart-labels="labels"
+            chart-colors="colors"
+            chart-options="options"
+            chart-dataset-override="datasetOverride" 
+          ></canvas> 
+    </ion-slide-page>
+    <ion-slide-page>
+      <canvas 
+            height="{{height_chart}}"
+            width="{{width_chart}}" 
+            class="chart-bar border_can"
+            chart-data="data"
+            chart-labels="labels"
+            chart-colors="colors"
+            chart-options="options"
+            chart-dataset-override="datasetOverride" 
+          ></canvas> 
+    </ion-slide-page>
+    <ion-slide-page>
+      <canvas 
+            height="{{height_chart}}"
+            width="{{width_chart}}" 
+            class="chart-bar border_can"
+            chart-data="data"
+            chart-labels="labels"
+            chart-colors="colors"
+            chart-options="options"
+            chart-dataset-override="datasetOverride" 
+          ></canvas> 
+    </ion-slide-page>
+
+  </ion-slides>
+	  			
 			</div>
   			<div class="col col-10 red_green_control" style="height:{{height_chart}}px">
                 <img src="img/color_green_1.png">
@@ -38,7 +68,8 @@
   			</div>
   		</div>
   
-  		<div class="logo_dump col col-33 col-offset-33"><img src="img/img_dump.png"></div>
- 
+  		<div class="logo_dump col col-33 col-offset-33 margin-top" ng-click="next()" ><img src="img/img_dump.png"></div>
+      
+ <div class="custom-swiper-pagination swiper-pagination"></div>
   </ion-content>
 </ion-view>

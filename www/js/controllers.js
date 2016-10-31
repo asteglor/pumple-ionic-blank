@@ -27,6 +27,19 @@ angular.module('blank.controllers', [])
             console.log("An error happened -> " + error);
         });
     };
+    $ionicModal.fromTemplateUrl('template/modal_email.html', {
+        scope: $scope,
+        animation: 'slide-in-up'
+    }).then(function(modal) {
+        $scope.modal_email = modal;
+    });
+    $scope.emailModal = function(){
+      $scope.modal_email.show();
+    };
+    $scope.emailModalHide = function(){
+      $window.location = "#/stchoise/email";
+      $scope.modal_email.hide();
+    };
     $ionicModal.fromTemplateUrl('template/modal.html', {
 				scope: $scope,
 				animation: 'slide-in-up'
@@ -51,10 +64,25 @@ angular.module('blank.controllers', [])
     };
     $scope.keyboardVisible = false;
     $scope.keyboardSettings = {
-        action: function(number) {
-            $scope.user.code += number;
+      leftButton: {
+            html: '<i class="icon ion-backspace"></i>',
+            action: function() {
+                $scope.user.code = $scope.user.code.slice(0, -1);
+                //console.log($scope.user.code);
+            }
         },
-        width:"73%",
+        rightButton: {
+            html: '<i class="icon ion-checkmark-circled"></i>',
+            action: function() {
+                $scope.smsModalHide();
+            }
+        },
+        action: function(number) {
+            if($scope.user.code.length < 4){
+              $scope.user.code += number;
+          }
+        },
+        width:"80%",
         roundButtons:true,
         theme:"balanced-dark" // light, stable, positive, calm, balanced, energized, assertive, royal, dark
     }
@@ -87,8 +115,18 @@ angular.module('blank.controllers', [])
   textColor: 'rgb(203, 203, 203)'
 };
 })
-.controller("appCtrl", function($scope){
-	$scope.colors = ['#0D601A', '#800105'];
+.controller("appCtrl", function($scope, $ionicSlideBoxDelegate){
+function shuffle(array) {
+  var tmp, current, top = array.length;
+  if(top) while(--top) {
+    current = Math.floor(Math.random() * (top + 1));
+    tmp = array[current];
+    array[current] = array[top];
+    array[top] = tmp;
+  }
+  return array;
+};
+	$scope.colors = ['#42a147', '#fd3737'];
 	$scope.options = {
         scales: {
           xAxes: [{
@@ -104,6 +142,49 @@ angular.module('blank.controllers', [])
     [36, 33, 34, 40, 30, 37, 39, 38, 34, 31, 33, 39, 35, 34, 39, 34, 37, 32, 36, 33, 39, 42, 39, 44, 39, 44, 40, 35, 39, 42, 38, 45, 44, 43, 37, 39, 37, 40, 36, 36, 36, 47, 41, 45, 47, 44, 45, 40, 42, 46, 46, 45, 60, 47, 54, 52, 56, 56, 47, 46, 50, 66, 65, 75, 61, 63, 56, 79, 68, 59, 73, 65, 56, 74, 79, 60, 79, 75, 79, 64, 69, 79, 94, 80, 89, 91, 95, 81, 93, 83, 81, 95, 91, 84, 84, 95, 96, 75, 86, 76],
     [37, 32, 35, 39, 31, 33, 30, 31, 30, 32, 32, 37, 32, 33, 31, 34, 36, 37, 33, 34, 40, 37, 36, 40, 38, 44, 43, 44, 39, 43, 40, 41, 41, 42, 39, 45, 45, 40, 39, 43, 44, 43, 47, 45, 49, 45, 43, 50, 41, 45, 47, 60, 50, 51, 58, 51, 48, 45, 56, 46, 51, 70, 60, 71, 79, 63, 75, 76, 62, 74, 77, 68, 69, 75, 80, 55, 63, 68, 63, 63, 76, 89, 79, 82, 91, 79, 77, 91, 80, 88, 82, 77, 95, 89, 75, 93, 92, 78, 93, 82,150]
     ];
+ $scope.onSwipe = function(){
+    shuffle($scope.data[0]);
+    shuffle($scope.data[1]);
+
+  };
+  $scope.slideOptions = {
+    freeMode: true,
+      nextButton: '.logo_dump',
+      prevButton: '.logo_pump',
+      paginationClickable: true,
+  pagination: '.custom-swiper-pagination',
+  paginationClickable: true,
+  loop: false,
+  speed: 500,
+  effect: "coverflow",// "coverflow" or "flip"
+  scrollbarHide: true,
+  paginationHide: true,
+  direction: 'vertical',
+  coverflow:{
+    rotate: 0,
+  stretch: 0,
+  depth: 500,
+  modifier: 1,
+
+  slideShadows : false
+  } 
+};
+$scope.startApp = function() {
+    $state.go('main');
+  };
+$scope.next = function() {
+    $ionicSlideBoxDelegate.next();
+    console.log("what wrong?");
+  };
+$scope.previous = function() {
+    $ionicSlideBoxDelegate.previous();
+     console.log("what wrong?");
+  };
+
+$scope.slideChanged = function(index) {
+    $scope.slideIndex = index;
+  };
+
 
     $scope.datasetOverride = [
       {

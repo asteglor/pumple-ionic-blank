@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:background="#55000000">
+
+    <com.pumpable.ui.views.TypefaceTextView
+        android:id="@+id/tv_title"
+        android:text="LOREM IPSUM DOLOR"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:typeface="lato_hairline"/>
+
+    <com.pumpable.ui.views.TypefaceTextView
+        android:id="@+id/tv_subtitle"
+        android:gravity="center"
+        android:text="in sollicitudin vestibulum luctus"
+        android:layout_below="@+id/tv_title"
+        android:layout_centerInParent="true"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:layout_marginTop="15dp"
+        app:typeface="lato_light_italic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_subtitle">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_done"
+            android:text="RECEIVE"
+            android:background="@drawable/btn_green_normal"
+            android:textColor="@android:color/white"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_title">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/img_win"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_stars"
+                android:layout_centerHorizontal="true"/>
+
+            <com.pumpable.ui.views.TypefaceTextView
+                android:id="@+id/tv_win"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                app:typeface="lato_bold"
+                android:textSize="30sp"
+                android:layout_marginTop="10dp"
+                android:text="YOU WON"
+                android:layout_below="@+id/img_win"
+                android:layout_centerHorizontal="true"/>
+
+
+            <com.pumpable.ui.views.TypefaceTextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                app:typeface="lato_bold"
+                android:textSize="60sp"
+                android:layout_marginTop="10dp"
+                android:text="$1000"
+                android:layout_below="@+id/tv_win"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

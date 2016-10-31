@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <View
+        android:id="@+id/center_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp" />
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_description"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/ic_logo" />
+
+    <com.pumpable.ui.views.TypefaceTextView
+        android:text="mobile app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_description"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="10dp"
+        android:layout_above="@+id/center_view"
+        app:typeface="lato_light"/>
+
+    <LinearLayout
+        android:id="@+id/ll_logins"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/center_view"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_email_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                app:srcCompat="@drawable/ic_email" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_email"
+                style="@style/ButtonStyle"
+                android:background="@drawable/rounded_button"
+                android:layout_width="@dimen/sign_in_buttons_width"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="LOGIN WITH EMAIL" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_google_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_google"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                app:srcCompat="@drawable/ic_google" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_google"
+                style="@style/ButtonStyle"
+                android:background="@drawable/rounded_button"
+                android:layout_width="@dimen/sign_in_buttons_width"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="LOGIN WITH GOOGLE" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_qr_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_qr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                app:srcCompat="@drawable/ic_qr_code" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_qr"
+                style="@style/ButtonStyle"
+                android:background="@drawable/rounded_button"
+                android:layout_width="@dimen/sign_in_buttons_width"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="LOGIN WITH QR" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_sms_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_sms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                app:srcCompat="@drawable/ic_sms" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_sms"
+                style="@style/ButtonStyle"
+                android:background="@drawable/rounded_button"
+                android:layout_width="@dimen/sign_in_buttons_width"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="LOGIN WITH SMS" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#44000000"
+        android:visibility="gone"
+        android:clickable="true">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

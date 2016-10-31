@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    >
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_logo_v2" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:hint="Email"
+        android:textColorHint="@color/light_gray"
+        android:theme="@style/AppTheme.EditText"
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_logo"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:inputType="textEmailAddress"
+        android:padding="-3dp"
+        android:textColor="@color/white"
+        android:textSize="20sp" >
+        <requestFocus/>
+    </android.support.v7.widget.AppCompatEditText>
+
+    <com.pumpable.ui.views.TypefaceTextView
+        android:id="@+id/tv_sms_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Login via Email"
+        android:textColor="@color/white" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_send"
+        style="@style/ButtonStyle"
+        android:layout_width="@dimen/sign_in_buttons_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_sms_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Confirm" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#44000000"
+        android:visibility="gone"
+        android:clickable="true">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

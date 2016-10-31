@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root">
+
+    <LinearLayout
+        android:id="@+id/ll_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true">
+
+        <!--1-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:background="#ff0b4a">
+
+            <com.pumpable.ui.views.TypefaceTextView
+                android:id="@+id/pos1"
+                android:layout_width="40dp"
+                android:textColor="@android:color/white"
+                android:text="1."
+                android:textSize="18sp"
+                app:typeface="lato_bold_italic"
+                android:layout_height="wrap_content" />
+
+            <com.pumpable.ui.views.TypefaceTextView
+                android:id="@+id/name1"
+                android:layout_width="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="John Carpenter"
+                android:layout_toRightOf="@+id/pos1"
+                app:typeface="lato_heavy"
+                android:textSize="18sp"
+                android:layout_height="wrap_content" />
+
+            <com.pumpable.ui.views.TypefaceTextView
+                android:id="@+id/score1"
+                android:layout_width="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="347"
+                android:textSize="20sp"
+                android:layout_alignParentRight="true"
+                app:typeface="lato_bold"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <!--2-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center_vertical">
+
+            <com.pumpable.ui.views.TypefaceTextView
+                android:id="@+id/pos2"
+                android:layout_width="40dp"
+                android:textColor="@android:color/white"
+                android:text="2."
+                android:textSize="18sp"
+                app:typeface="lato_bold_italic"
+                android:layout_height="wrap_content" />
+
+            <com.pumpable.ui.views.TypefaceTextView
+                android:id="@+id/name2"
+                android:layout_width="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="Andy Fields"
+                android:layout_toRightOf="@+id/pos2"
+                app:typeface="lato_heavy"
+                android:textSize="18sp"
+                android:layout_height="wrap_content" />
+
+            <com.pumpable.ui.views.TypefaceTextView
+                android:id="@+id/score2"
+                android:layout_width="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="311"
+                android:textSize="20sp"
+                android:layout_alignParentRight="true"
+                app:typeface="lato_bold"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+        <!--3-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center_vertical">
+
+            <com.pumpable.ui.views.TypefaceTextView
+                android:id="@+id/pos3"
+                android:layout_width="40dp"
+                android:textColor="@android:color/white"
+                android:text="3."
+                android:textSize="18sp"
+                app:typeface="lato_bold_italic"
+                android:layout_height="wrap_content" />
+
+            <com.pumpable.ui.views.TypefaceTextView
+                android:id="@+id/name3"
+                android:layout_width="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="Gary Austin"
+                android:layout_toRightOf="@+id/pos3"
+                app:typeface="lato_heavy"
+                android:textSize="18sp"
+                android:layout_height="wrap_content" />
+
+            <com.pumpable.ui.views.TypefaceTextView
+                android:id="@+id/score3"
+                android:layout_width="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="297"
+                android:textSize="20sp"
+                android:layout_alignParentRight="true"
+                app:typeface="lato_bold"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <!--4-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center_vertical">
+
+            <com.pumpable.ui.views.TypefaceTextView
+                android:id="@+id/pos4"
+                android:layout_width="40dp"
+                android:textColor="@android:color/white"
+                android:text="4."
+                android:textSize="18sp"
+                app:typeface="lato_bold_italic"
+                android:layout_height="wrap_content" />
+
+            <com.pumpable.ui.views.TypefaceTextView
+                android:id="@+id/name4"
+                android:layout_width="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="Jay Bell"
+                android:layout_toRightOf="@+id/pos4"
+                app:typeface="lato_heavy"
+                android:textSize="18sp"
+                android:layout_height="wrap_content" />
+
+            <com.pumpable.ui.views.TypefaceTextView
+                android:id="@+id/score4"
+                android:layout_width="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="280"
+                android:textSize="20sp"
+                android:layout_alignParentRight="true"
+                app:typeface="lato_bold"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <!--5-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center_vertical">
+
+            <com.pumpable.ui.views.TypefaceTextView
+                android:id="@+id/pos5"
+                android:layout_width="40dp"
+                android:textColor="@android:color/white"
+                android:text="5."
+                android:textSize="18sp"
+                app:typeface="lato_bold_italic"
+                android:layout_height="wrap_content" />
+
+            <com.pumpable.ui.views.TypefaceTextView
+                android:id="@+id/name5"
+                android:layout_width="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="Rudy Moran"
+                android:layout_toRightOf="@+id/pos5"
+                app:typeface="lato_heavy"
+                android:textSize="18sp"
+                android:layout_height="wrap_content" />
+
+            <com.pumpable.ui.views.TypefaceTextView
+                android:id="@+id/score5"
+                android:layout_width="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="266"
+                android:textSize="20sp"
+                android:layout_alignParentRight="true"
+                app:typeface="lato_bold"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_list"
+        android:background="#55000000">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            
+            <ImageView
+                android:id="@+id/img_win"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_stars"
+                android:layout_centerHorizontal="true"/>
+
+            <com.pumpable.ui.views.TypefaceTextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                app:typeface="lato_bold"
+                android:textSize="30sp"
+                android:layout_marginTop="10dp"
+                android:text="YOU ARE WIN!"
+                android:layout_below="@+id/img_win"
+                android:layout_centerHorizontal="true"/>
+
+            <com.pumpable.ui.views.TypefaceTextView
+                android:id="@+id/tv_subtitle"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                app:typeface="lato_italic"
+                android:textSize="15sp"
+                android:layout_below="@+id/tv_title"
+                android:layout_marginTop="10dp"
+                android:text="your current score"/>
+
+            <com.pumpable.ui.views.TypefaceTextView
+                android:id="@+id/tv_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                app:typeface="lato_bold"
+                android:textSize="60sp"
+                android:layout_marginTop="10dp"
+                android:text="347"
+                android:layout_below="@+id/tv_subtitle"
+                android:layout_centerHorizontal="true"/>
+            
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

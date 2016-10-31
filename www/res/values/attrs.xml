@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TypefaceTextView">
+        <attr name="typeface" />
+    </declare-styleable>
+
+    <!-- Changing the attribute must be reflected in the TypefaceManager -->
+    <attr name="typeface" format="enum">
+        <enum name="lato_black" value="0" />
+        <enum name="lato_black_italic" value="1" />
+        <enum name="lato_bold" value="2" />
+        <enum name="lato_bold_italic" value="3" />
+        <enum name="lato_hairline" value="4" />
+        <enum name="lato_hairline_italic" value="5" />
+        <enum name="lato_heavy" value="6" />
+        <enum name="lato_heavy_italic" value="7" />
+        <enum name="lato_italic" value="8" />
+        <enum name="lato_light" value="9" />
+        <enum name="lato_light_italic" value="10" />
+        <enum name="lato_medium" value="11" />
+        <enum name="lato_medium_italic" value="12" />
+        <enum name="lato_regular" value="13" />
+        <enum name="lato_semibold" value="14" />
+        <enum name="lato_semibold_italic" value="15" />
+        <enum name="lato_thin" value="16" />
+        <enum name="lato_thin_italic" value="17" />
+    </attr>
+
+    <declare-styleable name="ProgressWheel">
+        <attr name="text" format="string" />
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="subText" format="string" />
+        <attr name="subTextColor" format="color" />
+        <attr name="subTextSize" format="dimension" />
+        <attr name="barColor" format="color" />
+        <attr name="rimColor" format="color" />
+        <attr name="rimWidth" format="dimension" />
+        <attr name="spinSpeed" format="dimension" />
+        <attr name="delayMillis" format="integer" />
+        <attr name="circleColor" format="color" />
+        <attr name="radius" format="dimension" />
+        <attr name="barWidth" format="dimension" />
+        <attr name="barLength" format="dimension" />
+        <attr name="contourColor" format="color"/>
+        <attr name="contourSize" format="dimension"/>
+        <attr name="max" format="dimension"/>
+    </declare-styleable>
+
+</resources>

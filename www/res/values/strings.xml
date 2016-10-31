@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Pumpable</string>
+    <string name="server_client_id">469883118035-5mtvsh7cvvs80pv0b4l7j0efdnjj07an.apps.googleusercontent.com</string>
+
+
+    <string name="empty_sms">Please, enter SMS code</string>
+    <string name="short_sms">Please, enter 4-digit SMS code</string>
+    <string name="empty_email">Please, enter email</string>
+    <string name="invalid_email">Please, enter valid email</string>
+
+    <string name="global_rank">Global Rank: <b>650/1000</b></string>
+    <string name="persent_rank">Percent Rank: <b>65th</b></string>
+    <string name="total_predictions">Total Predictions: <b>3817</b></string>
+    <string name="correct_predictions">Correct Predictions: <b>2381</b></string>
+</resources>

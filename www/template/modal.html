@@ -14,14 +14,14 @@
 					    						<input type="tel" id="showKeyboard" ng-model="user.code">
 					  					</label>  -->
 					<label class="item item-input item-black marign-top-20 num-key">
-  						<input type="text" ng-model="user.code" ng-click="showKeyboard($event)">
+  						<input type="text" ng-model="user.code" ng-click="showKeyboard($event)" readonly max="9999">
 					</label>
 
 					 <!--  <div class="card">
 					 	<div class="item">{{code}}</div>
 					 </div> -->
 				<div class="padding font-weigth">Login via SMS</div>
-				<input type="submit" value="Confirm" class="button button-green button-block button-positive activated green-green button-with-5 button-width-center" ng-click="smsModalHide()">
+				<!-- <input type="submit" value="Confirm" class="button button-green button-block button-positive activated green-green button-with-5 button-width-center" ng-click="smsModalHide()"> -->
 			</div>
 			
 		</ion-content>
